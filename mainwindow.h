@@ -23,6 +23,8 @@ public:
 private:
 	QDateTime lastSmoking;
 	double smokePerDay;
+	QString moneyUnit;
+	double cigarettePrice;
 	Ui::MainWindow *ui;
 	QTimer timer;
 	QString setSize(QString, int size);
@@ -35,6 +37,8 @@ private slots:
 	void on_dateTimeEdit_dateTimeChanged(const QDateTime &dateTime);
 	void on_pushButton_2_clicked();
 	void on_spinBox_valueChanged(int arg1);
+	void on_unitLineEdit_textChanged(const QString &arg1);
+	void on_priceDoubleSpinBox_valueChanged(double arg1);
 };
 
 #endif // MAINWINDOW_H
